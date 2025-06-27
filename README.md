@@ -80,6 +80,8 @@ Os desafios práticos estão sendo resolvidos e armazenados em [`/desafios`](./d
 
 ## 📌 Contato
 
+
+📧 andrelucas85@hotmail.com 
 📧 andre611almeida@gmail.com  
 🔗 [GitHub](https://github.com/llandrell)
 
