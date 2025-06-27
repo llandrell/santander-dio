@@ -8,6 +8,9 @@ Aqui você encontrará resumos, exemplos de código, dicas e explicações dos p
 
 ## 📚 Estrutura das Anotações
 
+- [`tipos-operadores`](tipos-operadores.md)  
+  Tipos básicos, operadores aritméticos, relacionais, lógicos e de atribuição em Python, além de manipulação de strings.
+  
 - [`fundamentos-python.md`](fundamentos-python.md)  
   Conceitos básicos, tipos de dados, variáveis, operadores e estruturas de controle.
 
