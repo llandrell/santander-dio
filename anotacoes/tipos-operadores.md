@@ -1,171 +1,106 @@
 
-# Tipos e Operadores em Python
+# Operadores de Associação em Python
 
-## Tipos Básicos de Dados
+## ✅ O que são?
 
-> **OBS:** Python é uma linguagem de tipagem dinâmica e forte. Vamos entender isso:
-
-### Tipagem dinâmica
-- O tipo da variável é determinado em tempo de execução (runtime), não precisa ser declarado explicitamente.
-- Você pode reatribuir uma variável para outro tipo sem erro.
-
-### Tipos principais:
-- **int**: números inteiros, como `10`, `-5`, `0`  
-- **float**: números decimais, como `3.14`, `-0.001`  
-- **str**: sequências de caracteres (texto), por exemplo: `"Olá, Mundo!"`  
-- **bool**: valores booleanos, `True` ou `False`  
-- **NoneType**: valor nulo, representado por `None`
+Os **operadores de associação** são utilizados para verificar se **um valor está ou não presente** dentro de uma coleção (como listas, strings, dicionários, tuplas, conjuntos, etc.).
 
 ---
 
-## Operadores Aritméticos
+## ✅ Operadores
 
-| Operador | Descrição          | Exemplo      | Resultado |
-|---------|--------------------|--------------|-----------|
-| `+`     | Adição             | `2 + 3`      | `5`       |
-| `-`     | Subtração          | `5 - 1`      | `4`       |
-| `*`     | Multiplicação      | `4 * 3`      | `12`      |
-| `/`     | Divisão            | `10 / 2`     | `5.0`     |
-| `//`    | Divisão inteira    | `10 // 3`    | `3`       |
-| `%`     | Resto da divisão   | `10 % 3`     | `1`       |
-| `**`    | Exponenciação      | `2 ** 3`     | `8`       |
+| Operador  | Significado                               |
+|-----------|-------------------------------------------|
+| `in`      | Retorna `True` se o valor **está presente** |
+| `not in`  | Retorna `True` se o valor **não está presente** |
 
 ---
 
-## Operadores Relacionais (Comparação)
+## 📌 Exemplos Práticos
 
-| Operador | Descrição         | Exemplo     | Resultado |
-|----------|-------------------|-------------|-----------|
-| `==`     | Igualdade         | `2 == 2`    | `True`    |
-| `!=`     | Diferente         | `2 != 3`    | `True`    |
-| `>`      | Maior que         | `5 > 3`     | `True`    |
-| `<`      | Menor que         | `3 < 5`     | `True`    |
-| `>=`     | Maior ou igual    | `3 >= 3`    | `True`    |
-| `<=`     | Menor ou igual    | `2 <= 3`    | `True`    |
+### 🔹 Em listas:
+```python
+frutas = ["maçã", "banana", "laranja"]
 
----
+print("banana" in frutas)        # True
+print("melancia" not in frutas)  # True
+```
 
-## Operadores Lógicos
+### 🔹 Em strings:
+```python
+mensagem = "Bem-vindo ao Python!"
 
-| Operador | Descrição                                         | Exemplo           | Resultado |
-|----------|-------------------------------------------------|-------------------|-----------|
-| `and`    | E lógico — ambas as condições precisam ser verdadeiras | `True and False`  | `False`   |
-| `or`     | Ou lógico — basta uma das condições ser verdadeira     | `True or False`   | `True`    |
-| `not`    | Negação — inverte o valor booleano                     | `not True`        | `False`   |
+print("Python" in mensagem)     # True
+print("Java" not in mensagem)   # True
+```
 
-> **Obs:**  
-> - Lista vazia (`[]`), string vazia (`""`) e outros valores considerados “vazios” são avaliados como `False` em contextos booleanos.  
-> - As operações lógicas seguem precedência similar à matemática (`not` > `and` > `or`).
+### 🔹 Em dicionários (verifica **chaves**, não valores):
+```python
+usuario = {"nome": "André", "idade": 30}
 
----
-
-## Operadores de Atribuição
-
-| Operador | Descrição                  | Exemplo     | Equivale a    |
-|----------|----------------------------|-------------|---------------|
-| `=`      | Atribuição simples         | `x = 5`     | `x = 5`       |
-| `+=`     | Soma e atribui             | `x += 3`    | `x = x + 3`   |
-| `-=`     | Subtrai e atribui          | `x -= 2`    | `x = x - 2`   |
-| `*=`     | Multiplica e atribui       | `x *= 4`    | `x = x * 4`   |
-| `/=`     | Divide e atribui           | `x /= 2`    | `x = x / 2`   |
-| `//=`    | Divisão inteira e atribui  | `x //= 3`   | `x = x // 3`  |
-| `%=`     | Módulo e atribui           | `x %= 5`    | `x = x % 5`   |
-| `**=`    | Potência e atribui         | `x **= 2`   | `x = x ** 2`  |
+print("nome" in usuario)    # True
+print("André" in usuario)   # False
+```
 
 ---
 
-## Operadores com Strings
+## 🛠️ Uso no Dia a Dia
 
-- **Concatenação:**  
-  ```python
-  "Olá, " + "mundo!"  # Resultado: "Olá, mundo!"
-  ```
-- **Repetição:**  
-  ```python
-  "A" * 5  # Resultado: "AAAAA"
-  ```
-# Tipos e Operadores em Python
+### ✅ 1. Validação de entrada do usuário
+```python
+opcoes_validas = ["s", "n"]
 
-## Tipos Básicos de Dados
+entrada = input("Deseja continuar? (s/n): ").lower()
+if entrada in opcoes_validas:
+    print("Entrada aceita!")
+else:
+    print("Opção inválida.")
+```
 
-> **OBS:** Python é uma linguagem de tipagem dinâmica e forte. Vamos entender isso:
+### ✅ 2. Verificar se usuário tem permissão
+```python
+usuarios_autorizados = ["joao", "maria", "ana"]
 
-### Tipagem dinâmica
-- O tipo da variável é determinado em tempo de execução (runtime), não precisa ser declarado explicitamente.
-- Você pode reatribuir uma variável para outro tipo sem erro.
+nome = input("Digite seu nome de usuário: ")
+if nome.lower() in usuarios_autorizados:
+    print("Acesso liberado")
+else:
+    print("Usuário não autorizado")
+```
 
-### Tipos principais:
-- **int**: números inteiros, como `10`, `-5`, `0`  
-- **float**: números decimais, como `3.14`, `-0.001`  
-- **str**: sequências de caracteres (texto), por exemplo: `"Olá, Mundo!"`  
-- **bool**: valores booleanos, `True` ou `False`  
-- **NoneType**: valor nulo, representado por `None`
+### ✅ 3. Verificar espaços em senha
+```python
+senha = input("Digite sua senha: ")
 
----
+if " " in senha:
+    print("A senha não pode conter espaços.")
+```
 
-## Operadores Aritméticos
+### ✅ 4. Conferir se chave existe em dicionário
+```python
+dados = {"nome": "Lucas", "idade": 25}
 
-| Operador | Descrição          | Exemplo      | Resultado |
-|---------|--------------------|--------------|-----------|
-| `+`     | Adição             | `2 + 3`      | `5`       |
-| `-`     | Subtração          | `5 - 1`      | `4`       |
-| `*`     | Multiplicação      | `4 * 3`      | `12`      |
-| `/`     | Divisão            | `10 / 2`     | `5.0`     |
-| `//`    | Divisão inteira    | `10 // 3`    | `3`       |
-| `%`     | Resto da divisão   | `10 % 3`     | `1`       |
-| `**`    | Exponenciação      | `2 ** 3`     | `8`       |
-
----
-
-## Operadores Relacionais (Comparação)
-
-| Operador | Descrição         | Exemplo     | Resultado |
-|----------|-------------------|-------------|-----------|
-| `==`     | Igualdade         | `2 == 2`    | `True`    |
-| `!=`     | Diferente         | `2 != 3`    | `True`    |
-| `>`      | Maior que         | `5 > 3`     | `True`    |
-| `<`      | Menor que         | `3 < 5`     | `True`    |
-| `>=`     | Maior ou igual    | `3 >= 3`    | `True`    |
-| `<=`     | Menor ou igual    | `2 <= 3`    | `True`    |
+if "idade" in dados:
+    print(f"Idade: {dados['idade']}")
+```
 
 ---
 
-## Operadores Lógicos
+## ⚠️ Observação
 
-| Operador | Descrição                                         | Exemplo           | Resultado |
-|----------|-------------------------------------------------|-------------------|-----------|
-| `and`    | E lógico — ambas as condições precisam ser verdadeiras | `True and False`  | `False`   |
-| `or`     | Ou lógico — basta uma das condições ser verdadeira      | `True or False`   | `True`    |
-| `not`    | Negação — inverte o valor booleano                        | `not True`        | `False`   |
-
-> **Obs:**  
-> - Lista vazia (`[]`), string vazia (`""`) e outros valores considerados “vazios” são avaliados como `False` em contextos booleanos.  
-> - As operações lógicas seguem precedência similar à matemática (`not` > `and` > `or`).
+- O operador `in` é **sensível à capitalização**:
+```python
+print("A" in "abacaxi")  # False
+print("a" in "abacaxi")  # True
+```
 
 ---
 
-## Operadores de Atribuição
+## ✅ Resumo Prático
 
-| Operador | Descrição                  | Exemplo     | Equivale a    |
-|----------|----------------------------|-------------|---------------|
-| `=`      | Atribuição simples         | `x = 5`     | `x = 5`       |
-| `+=`     | Soma e atribui             | `x += 3`    | `x = x + 3`   |
-| `-=`     | Subtrai e atribui          | `x -= 2`    | `x = x - 2`   |
-| `*=`     | Multiplica e atribui       | `x *= 4`    | `x = x * 4`   |
-| `/=`     | Divide e atribui           | `x /= 2`    | `x = x / 2`   |
-| `//=`    | Divisão inteira e atribui  | `x //= 3`   | `x = x // 3`  |
-| `%=`     | Módulo e atribui           | `x %= 5`    | `x = x % 5`   |
-| `**=`    | Potência e atribui         | `x **= 2`   | `x = x ** 2`  |
-
----
-
-## Operadores com Strings
-
-- **Concatenação:**  
-  ```python
-  "Olá, " + "mundo!"  # Resultado: "Olá, mundo!"
-  ```
-- **Repetição:**  
-  ```python
-  "A" * 5  # Resultado: "AAAAA"
-  ```
+| Situação                              | Usa `in` ou `not in`? |
+|---------------------------------------|------------------------|
+| Verificar se valor está em lista      | `in`                  |
+| Verificar se valor **não** está em lista | `not in`           |
+| Verificar se caractere está em string | `in`                  |
+| Verificar se chave está em dicionário | `in`                  |
