@@ -1,87 +1,90 @@
- 🚀 Santander Bootcamp 2025 - Python Developer | DIO
+# 🚀 Santander 2025 - Back-End com Python | DIO
 
-Bem-vindo ao meu repositório de estudos do Bootcamp **Python Developer** promovido pelo **Santander** em parceria com a **DIO (Digital Innovation One)**.
+![Banner do Curso](https://assets.dio.me/Ypa0a_wYeZqQ_cKqtU1uiwbYknySjeGRUmwnQ8gVHqg/f:webp/h:120/q:80/L3RyYWNrcy9iZjZjOWIwYS0wY2FjLTRkMjYtYTIzNy00NWVmODlkZDgwYjIucG5n)
 
-Este projeto funciona como um caderno de anotações pessoal, onde compartilho meu progresso, aprendizados, desafios e projetos práticos desenvolvidos ao longo do bootcamp.
+Repositório de estudos e projetos do Bootcamp **Santander 2025 - Back-End com Python**, oferecido pelo **Santander** em parceria com a **DIO (Digital Innovation One)**.
+
+Este repositório funciona como um **caderno de anotações digital**, onde registro meus aprendizados, desafios resolvidos e projetos desenvolvidos durante a trilha formativa.
 
 ---
 
 ## 📚 Sobre o Bootcamp
 
-O Bootcamp oferece uma trilha completa de Python com foco em:
+O bootcamp tem como objetivo capacitar desenvolvedores com foco em Back-End com Python, abordando desde os fundamentos até a criação de APIs e bancos de dados. Durante a formação, o estudante aprende a:
 
-- Fundamentos da linguagem Python
-- Programação orientada a objetos (POO)
-- Estruturas de dados
-- Banco de dados com SQL
-- Desenvolvimento web com Flask/Django
-- APIs REST
-- Git e GitHub
-- Projetos práticos
+- Dominar a sintaxe e os fundamentos do Python
+- Trabalhar com estruturas de dados, listas e dicionários
+- Manipular strings e criar sistemas interativos
+- Utilizar Git e GitHub para versionamento
+- Criar APIs com FastAPI
+- Integrar aplicações com banco de dados SQL
 
-Plataforma: [dio.me](https://www.dio.me)
+**Ferramentas e Atividades**:
 
----
+- ✅ **Mentorias (Lives)** com especialistas do mercado
+- ✅ **Desafios de Código** para testar os conhecimentos adquiridos
+- ✅ **Desafios de Projeto** para desenvolver o portfólio
+- ✅ **Ranking** com premiações por participação e qualidade de código
+- ✅ **Fórum**, **Rooms** e **Rede de Matriculados** para interação e networking
+- ✅ **Certificados** emitidos a cada conquista
 
-## 📒 Estrutura do Repositório
-
-
-📁 Santander-dio
-├── README.md
-├──1-primeira-Aula
-├──2-conhecendo-python
-├──dio-lab-open-source
-├──Operadores
-├── anotacoes/
-│   ├── fundamentos-python.md
-│   ├── poo.md
-│   └── flask.md
-├── desafios/
-│   ├── desafio01.py
-│   ├── desafio02.py
-│   └── ...
-├── projetos/
-│   ├── api-consumo/
-│   └── sistema-estudantil/
-└── recursos/
-    └── links-uteis.md
-
+Plataforma oficial: [dio.me](https://www.dio.me)
 
 ---
 
-## 🧠 Aprendizados e Anotações
+## 📁 Estrutura do Repositório
 
-### ✅ Progresso
-
-| Módulo | Título | Status |
-|--------|--------|--------|
-| 01     | Fundamentos Python | ✅ Concluído |
-| 02     | POO e Coleções     | ✅ Concluído |
-| 03     | Flask e APIs       | 🔄 Em andamento |
-| 04     | Projeto Final      | ⏳ Em breve |
-
-### ✍️ Anotações
-
-As anotações estão sendo organizadas por módulo e podem ser acessadas na pasta `/anotacoes`.
+```bash
+santander-dio/
+├── anotacoes/         # Caderno de anotações organizadas por tema
+├── desafios/          # Exercícios práticos e algoritmos
+├── projetos/          # Projetos práticos e desafiadores
+└── README.md          # Este arquivo
+```
 
 ---
 
-## 💡 Ideias para Melhorar o Projeto
+## 📒 Progresso
 
-- [ ] Adicionar resumos em PDF por módulo
-- [ ] Incluir vídeos curtos explicando os conceitos
-- [ ] Criar README para cada subpasta
-- [ ] Adicionar gráficos e fluxogramas com Mermaid.js
+| Módulo                                                                 | Status       |
+|------------------------------------------------------------------------|--------------|
+| Princípios de Desenvolvimento De Aplicações Python                    | ⏳ Em progresso |
+| Operadores e Manipulação de String com Python                         | ⏳ 0%         |
+| Estruturas de Dados e Listas com Python                               | ⏳ 0%         |
+| Trabalhando Com Funções em Python                                     | ⏳ 0%         |
+| Orientação a Objetos e Boas Práticas em Python                        | ⏳ 0%         |
+| Trabalhando com Pacotes Python                                        | ⏳ 0%         |
+| Integração Python com Banco de Dados                                  | ⏳ 0%         |
+| Desenvolvimento Orientado a Testes com Python                         | ⏳ 0%         |
+| Santander 2025 - Back-End com Python (Trilha completa - 45h restantes)| ✅ 17%        |
 
 ---
 
-## 🤝 Contribuição
+## 🧠 Notas Pessoais
 
-Este repositório é de uso pessoal, mas se quiser sugerir algo ou corrigir algo que viu, fique à vontade para abrir um PR ou Issue.
+As anotações estão sendo mantidas na pasta [`/anotacoes`](./anotacoes), organizadas por tema. Aqui anoto dicas, comandos, códigos úteis e insights ao longo do bootcamp.
+
+---
+
+## 💻 Projetos
+
+A pasta [`/projetos`](./projetos) conterá projetos práticos realizados ao longo da formação. Cada projeto terá seu próprio `README.md` explicando o contexto, objetivo e tecnologias utilizadas.
+
+---
+
+## 🛠️ Desafios de Código
+
+Os desafios práticos estão sendo resolvidos e armazenados em [`/desafios`](./desafios), com foco na aplicação dos conceitos estudados.
 
 ---
 
 ## 📌 Contato
 
 📧 andre611almeida@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/seu-usuario)
+🔗 [GitHub](https://github.com/llandrell)
+
+---
+
+## 📎 Licença
+
+Este projeto é de uso pessoal e educativo. Fique à vontade para clonar e utilizar como base para seus próprios estudos.
