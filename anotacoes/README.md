@@ -8,11 +8,11 @@ Aqui você encontrará resumos, exemplos de código, dicas e explicações dos p
 
 ## 📚 Estrutura das Anotações
 
-- [`tipos-operadores`](tipos-operadores.md)  
+- [`tipos-operadores.md`](tipos-operadores.md)  
   Tipos básicos, operadores aritméticos, relacionais, lógicos e de atribuição em Python, além de manipulação de strings.
   
-- [`fundamentos-python.md`](fundamentos-python.md)  
-  Conceitos básicos, tipos de dados, variáveis, operadores e estruturas de controle.
+- [`estrturas-condicionais-repetição.md`](estrturas-condicionais-repetição.md)  
+ Introdução às estruturas de controle de fluxo em Python, como condicionais (if, elif, else) e estruturas de repetição (for, while). O módulo explora como tomar decisões no código, executar blocos de forma repetitiva e controlar o fluxo da execução com instruções como break e continue, além de exemplos práticos aplicados no dia a dia da programação.
 
 - [`operadores.md`](operadores.md)  
   Manipulação de strings, operadores aritméticos, relacionais e lógicos.
