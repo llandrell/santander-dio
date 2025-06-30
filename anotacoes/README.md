@@ -11,12 +11,10 @@ Aqui você encontrará resumos, exemplos de código, dicas e explicações dos p
 - [`tipos-operadores.md`](tipos-operadores.md)  
   Tipos básicos, operadores aritméticos, relacionais, lógicos e de atribuição em Python, além de manipulação de strings.
   
-- [`estrturas-condicionais-repetição.md`](estrturas-condicionais-repetição.md)  
- Introdução às estruturas de controle de fluxo em Python, como condicionais (if, elif, else) e estruturas de repetição (for, while). O módulo explora como tomar decisões no código, executar blocos de forma repetitiva e controlar o fluxo da execução com instruções como break e continue, além de exemplos práticos aplicados no dia a dia da programação.
 
-- [`operadores.md`](operadores.md)  
-  Manipulação de strings, operadores aritméticos, relacionais e lógicos.
-
+- [`estruturas-condicionais.md`](estruturas-condicionais.md)  
+  Introdução às estruturas condicionais em Python, abordando o uso de comandos como if, else e elif para controle de fluxo e tomada de decisões em programas.
+  
 - [`estruturas-dados.md`](estruturas-dados.md)  
   Listas, tuplas, dicionários e conjuntos — suas operações e aplicações.
 
