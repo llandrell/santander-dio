@@ -40,53 +40,44 @@ santander-dio/
 ├── desafios/          # Exercícios práticos e algoritmos
 ├── projetos/          # Projetos práticos e desafiadores
 └── README.md          # Este arquivo
-```
 
----
+📒 Progresso
+Módulo	Status
+Princípios de Desenvolvimento De Aplicações Python	✅ Concluído
+Operadores e Manipulação de String com Python	🔁 50% concluído
+Estruturas Condicionais e de Repetição em Python	🔁 Em andamento
+Estruturas de Dados e Listas com Python	⏳ Não iniciado
+Trabalhando Com Funções em Python	⏳ Não iniciado
+Orientação a Objetos e Boas Práticas em Python	⏳ Não iniciado
+Trabalhando com Pacotes Python	⏳ Não iniciado
+Integração Python com Banco de Dados	⏳ Não iniciado
+Desenvolvimento Orientado a Testes com Python	⏳ Não iniciado
+Santander 2025 - Back-End com Python (Trilha completa - 45h restantes)	✅ 17% concluído
+🧠 Notas Pessoais
 
-## 📒 Progresso
+As anotações estão sendo mantidas na pasta /anotacoes, organizadas por tema. Aqui anoto dicas, comandos, boas práticas, explicações conceituais e exemplos de código para cada módulo estudado.
+💻 Projetos
 
-| Módulo                                                                 | Status       |
-|------------------------------------------------------------------------|--------------|
-| Princípios de Desenvolvimento De Aplicações Python                    | ⏳ Em progresso |
-| Operadores e Manipulação de String com Python                         | ⏳ 0%         |
-| Estruturas de Dados e Listas com Python                               | ⏳ 0%         |
-| Trabalhando Com Funções em Python                                     | ⏳ 0%         |
-| Orientação a Objetos e Boas Práticas em Python                        | ⏳ 0%         |
-| Trabalhando com Pacotes Python                                        | ⏳ 0%         |
-| Integração Python com Banco de Dados                                  | ⏳ 0%         |
-| Desenvolvimento Orientado a Testes com Python                         | ⏳ 0%         |
-| Santander 2025 - Back-End com Python (Trilha completa - 45h restantes)| ✅ 17%        |
+A pasta /projetos conterá os projetos práticos desenvolvidos ao longo da formação.
+Cada projeto terá seu próprio README.md explicando:
 
----
+    Objetivo
 
-## 🧠 Notas Pessoais
+    Tecnologias utilizadas
 
-As anotações estão sendo mantidas na pasta [`/anotacoes`](./anotacoes), organizadas por tema. Aqui anoto dicas, comandos, códigos úteis e insights ao longo do bootcamp.
+    Etapas de desenvolvimento
 
----
+    Como executar o projeto localmente
 
-## 💻 Projetos
+🛠️ Desafios de Código
 
-A pasta [`/projetos`](./projetos) conterá projetos práticos realizados ao longo da formação. Cada projeto terá seu próprio `README.md` explicando o contexto, objetivo e tecnologias utilizadas.
+Os desafios práticos e exercícios estão organizados em /desafios, com foco na aplicação dos conceitos estudados em lógica, sintaxe e resolução de problemas com Python.
+📌 Contato
 
----
+📧 andrelucas85@hotmail.com
+📧 611almeida@gmail.com
+🔗 GitHub - llandrell
+📎 Licença
 
-## 🛠️ Desafios de Código
-
-Os desafios práticos estão sendo resolvidos e armazenados em [`/desafios`](./desafios), com foco na aplicação dos conceitos estudados.
-
----
-
-## 📌 Contato
-
-
-📧 andrelucas85@hotmail.com 
-📧 andre611almeida@gmail.com  
-🔗 [GitHub](https://github.com/llandrell)
-
----
-
-## 📎 Licença
-
-Este projeto é de uso pessoal e educativo. Fique à vontade para clonar e utilizar como base para seus próprios estudos.
+Este projeto é de uso pessoal e educativo.
+Fique à vontade para clonar, estudar e usar como base para seus próprios projetos e anotações.
