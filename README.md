@@ -40,8 +40,8 @@ santander-dio/
 ├── desafios/          # Exercícios práticos e algoritmos
 ├── projetos/          # Projetos práticos e desafiadores
 └── README.md          # Este arquivo
-
-📒 Progresso
+```
+###📒 Progresso
 Módulo	Status
 Princípios de Desenvolvimento De Aplicações Python	✅ Concluído
 Operadores e Manipulação de String com Python	🔁 50% concluído
@@ -76,7 +76,7 @@ Os desafios práticos e exercícios estão organizados em /desafios, com foco na
 
 📧 andrelucas85@hotmail.com
 📧 611almeida@gmail.com
-🔗 GitHub - llandrell
+🔗 GitHub - [llandrell](https://www.dio.me) 
 📎 Licença
 
 Este projeto é de uso pessoal e educativo.
