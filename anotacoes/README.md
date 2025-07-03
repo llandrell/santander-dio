@@ -8,15 +8,15 @@ Aqui você encontrará resumos, exemplos de código, dicas e explicações dos p
 
 ## 📚 Estrutura das Anotações
 
-- [`tipos-operadores.md`](tipos-operadores.md)  
+- [`tipos-operadores.md`](1-tipos_operadores.md)  
   Tipos básicos, operadores aritméticos, relacionais, lógicos e de atribuição em Python, além de manipulação de strings.
   
 
-- [`estruturas-condicionais.md`](estruturas-condicionais.md)  
+- [`estruturas-condicionais.md`](2-estruturas_condicionais.md)  
   Introdução às estruturas condicionais em Python, abordando o uso de comandos como if, else e elif para controle de fluxo e tomada de decisões em programas.
   
-- [`estruturas-dados.md`](estruturas-dados.md)  
-  Listas, tuplas, dicionários e conjuntos — suas operações e aplicações.
+- [`3-manipulando_string.md`](3-manipulando_string.md)  
+  Manipulação de textos com Python — fatiamento, concatenação, métodos de string e boas práticas.
 
 - [`funcoes.md`](funcoes.md)  
   Criação e uso de funções, parâmetros, retorno e escopo.
