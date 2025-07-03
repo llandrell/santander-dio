@@ -40,7 +40,7 @@ santander-dio/
 ├── desafios/          # Exercícios práticos e algoritmos
 ├── projetos/          # Projetos práticos e desafiadores
 └── README.md          # Este arquivo
-```
+
 ###📒 Progresso
 Módulo	Status
 Princípios de Desenvolvimento De Aplicações Python	✅ Concluído
