@@ -18,6 +18,58 @@ com várias linhas."""
 ```
 
 ---
+## 🧰 Métodos Úteis de Strings em Python
+
+A linguagem Python oferece diversos métodos nativos para manipulação e formatação de strings. Abaixo, listamos os principais e mais utilizados:
+
+| Método                 | Descrição                                                                 |
+|------------------------|--------------------------------------------------------------------------|
+| `lower()`              | Converte todos os caracteres da string para minúsculas                   |
+| `upper()`              | Converte todos os caracteres da string para maiúsculas                   |
+| `capitalize()`         | Deixa apenas a primeira letra em maiúscula e o restante em minúsculo     |
+| `title()`              | Converte a primeira letra de cada palavra para maiúscula                 |
+| `strip()`              | Remove os espaços em branco do início e do fim da string                 |
+| `lstrip()`             | Remove os espaços em branco somente do lado esquerdo (início)            |
+| `rstrip()`             | Remove os espaços em branco somente do lado direito (fim)                |
+| `center(tam, "simbolo")` | Centraliza o texto com um determinado tamanho, preenchido com o símbolo|
+| `replace(a, b)`        | Substitui todas as ocorrências do trecho `a` pelo valor `b`              |
+| `split()`              | Divide a string em uma lista, separando pelo espaço ou caractere definido|
+| `join(lista)`          | Junta os elementos de uma lista em uma única string                      |
+| `find()` / `index()`   | Retorna o índice da primeira ocorrência de um caractere ou substring     |
+
+---
+
+### 🔎 Exemplos de Uso
+
+```python
+frase = "  Python é divertido  "
+
+print(frase.strip())                     # "Python é divertido"
+print(frase.upper())                     # "  PYTHON É DIVERTIDO  "
+print(frase.lower())                     # "  python é divertido  "
+print(frase.capitalize())               # "  python é divertido  "
+print(frase.title())                     # "  Python É Divertido  "
+print(frase.replace("divertido", "poderoso"))  # "  Python é poderoso  "
+print(frase.center(30, "-"))             # "---  Python é divertido  ----"
+```
+
+> 🔹 Dica: A manipulação de strings é essencial para a entrada e saída de dados, validações, formatação de mensagens e muito mais!
+
+---
+## 🔠 Interpolação de variáveis (Formatando Strings)
+
+### Usando `f-strings` (Python 3.6+)
+
+#### Também conhecida como formatação de strings — que é a forma de inserir valores de variáveis dentro de textos (strings) no Python.
+
+```python
+nome = "André"
+idade = 30
+print(f"Olá, meu nome é {nome} e tenho {idade} anos.")
+```
+
+---
+
 
 ## ✂️ Fatiamento (Slicing)
 
@@ -26,10 +78,12 @@ Permite acessar partes específicas de uma string por índice.
 ```python
 mensagem = "Python é incrível"
 
-print(mensagem[0])       # P
-print(mensagem[0:6])     # Python
-print(mensagem[7:])      # é incrível
+print(mensagem[0])       # P (pega a primeira letra)
+print(mensagem[0:6])     # Python (pega a primeira letra e até o ind 6)
+print(mensagem[7:])      # é incrível (pega a 7 letras apenas)
 print(mensagem[-1])      # l (último caractere)
+print(mensagem[7:6:2])      # v (último caractere)
+print(mensagem[::-1])      # v (último caractere)
 ```
 
 ---
@@ -56,32 +110,7 @@ print("ha" * 3)  # hahaha
 
 ---
 
-## 🧰 Métodos úteis de string
 
-| Método             | Descrição                                      |
-|--------------------|-----------------------------------------------|
-| `lower()`          | Converte para minúsculas                      |
-| `upper()`          | Converte para maiúsculas                      |
-| `capitalize()`     | Primeira letra maiúscula                      |
-| `title()`          | Primeira letra de cada palavra em maiúscula  |
-| `strip()`          | Remove espaços no início e fim               |
-| `replace(a, b)`    | Substitui `a` por `b`                         |
-| `split()`          | Divide string em lista                        |
-| `join(lista)`      | Junta elementos de uma lista em uma string    |
-| `find()` / `index()` | Retorna o índice de um caractere/texto     |
-
-### Exemplos:
-
-```python
-frase = "  Python é divertido  "
-
-print(frase.strip())        # "Python é divertido"
-print(frase.upper())        # "  PYTHON É DIVERTIDO  "
-print(frase.lower())        # "  python é divertido  "
-print(frase.replace("divertido", "poderoso"))  # "  Python é poderoso  "
-```
-
----
 
 ## 🔍 Verificações com `in`
 
@@ -129,7 +158,13 @@ print(palavras)  # ['Python', 'é', 'incrível']
 ```
 
 ---
+## Strings de múltiplas linhas
 
+-são definidas informando 3 aspas simples '''texto''' ou duplas """texto"""
+--podem ser ocupadas por várias linhas
+--todos os esáçoes em branco são incluídos na string final
+
+---
 ## 🛠️ Boas práticas
 
 - Sempre use métodos como `.strip()` para limpar entradas do usuário.
