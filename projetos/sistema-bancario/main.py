@@ -96,7 +96,8 @@ while True:
         saldo, extrato, numero_saque = saque(valor, saldo, extrato, numero_saque, LIMITE_SAQUES)
 
     elif opcao == "e":
-        print("Extrato selecionado.")
+        print("\nExtrato selecionado.")
+        print("\n############ EXTRATO ############")
         impExtrato(extrato, saldo)
     elif opcao == "q":
         print("Saindo do sistema.")
