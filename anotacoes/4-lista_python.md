@@ -19,6 +19,8 @@ Embora o módulo discuta estruturas de dados como **listas, conjuntos e dicioná
 
 ---
 
+
+
 ## 🧠 Tópicos Abordados
 
 - Criação e manipulação de listas
@@ -40,6 +42,170 @@ Embora o módulo discuta estruturas de dados como **listas, conjuntos e dicioná
 - Listas são **mutáveis**: seus elementos podem ser modificados após a criação.
 
 ---
+
+## 📚 Metodos
+1. append() → Adiciona um item no final da lista
+📘 Exemplo:
+```python
+    frutas = ['maçã', 'banana']
+    frutas.append('laranja')
+    print(frutas)
+
+    Resultado: ['maçã', 'banana', 'laranja']
+```
+    ✅ Como lembrar: append = adicionar ao fim
+
+
+2. extend() → Junta outra lista (ou vários itens) à lista atual
+📘 Exemplo:
+```python
+    frutas = ['maçã', 'banana']
+    frutas.extend(['abacaxi', 'uva'])
+    print(frutas)
+
+    Resultado: ['maçã', 'banana', 'abacaxi', 'uva']
+```
+    ✅ Usa-se para adicionar vários itens de uma vez
+
+3. insert(posição, item) → Insere um item na posição que você quiser
+📘 Exemplo:
+```python
+    frutas = ['maçã', 'banana']
+    frutas.insert(1, 'kiwi')
+    print(frutas)
+
+    Resultado: ['maçã', 'kiwi', 'banana']
+```python
+    ✅ Primeiro argumento é a posição (índice), o segundo é o valor
+
+4. remove(item) → Remove a primeira ocorrência de um item
+📘 Exemplo:
+```python
+    frutas = ['maçã', 'banana', 'banana']
+    frutas.remove('banana')
+    print(frutas)
+
+    Resultado: ['maçã', 'banana']
+```
+    ⚠️ Se não encontrar o item, dá erro!
+
+
+5. pop(posição) → Remove e retorna um item. Se não passar nada, remove o último
+📘 Exemplo 1 (remover o último):
+
+```python
+    frutas = ['maçã', 'banana']
+    removido = frutas.pop()
+    print(removido)  # banana
+    print(frutas)    # ['maçã']
+```
+
+📘 Exemplo 2 (remover na posição 0):
+```python
+    frutas = ['maçã', 'banana']
+    frutas.pop(0)
+    print(frutas)    # ['banana']
+```
+    ✅ Muito usado quando queremos usar e remover ao mesmo tempo
+
+6. index(item) → Retorna o índice da primeira vez que um item aparece
+📘 Exemplo:
+```python
+    frutas = ['maçã', 'banana', 'laranja']
+    pos = frutas.index('banana')
+    print(pos)
+```
+📌 Resultado: 1
+
+    ⚠️ Se o item não existir, dá erro!
+
+
+7. sort() → Ordena a lista em ordem crescente (alfabética ou numérica)
+📘 Exemplo:
+```python
+    numeros = [5, 2, 8, 1]
+    numeros.sort()
+    print(numeros)
+```
+📌 Resultado: [1, 2, 5, 8]
+🔁 Para ordem decrescente:
+```python
+    numeros.sort(reverse=True)
+    print(numeros)
+```
+📌 Resultado: [8, 5, 2, 1]
+
+    ✅ Altera a lista original. Para manter original, use sorted(lista)
+
+
+8. reverse() → Inverte a ordem dos elementos (não confundir com sort!)
+📘 Exemplo:
+```python
+    frutas = ['maçã', 'banana', 'laranja']
+    frutas.reverse()
+    print(frutas)
+```
+📌 Resultado: ['laranja', 'banana', 'maçã']
+
+
+9. count(item) → Conta quantas vezes um item aparece na lista
+📘 Exemplo:
+```python
+    frutas = ['banana', 'banana', 'maçã']
+    print(frutas.count('banana'))
+```
+📌 Resultado: 2
+
+
+10. clear() → Limpa toda a lista (remove todos os itens)
+📘 Exemplo:
+```python
+    frutas = ['maçã', 'banana']
+    frutas.clear()
+    print(frutas)
+```
+📌 Resultado: [] (lista vazia)
+
+
+11. copy() → Cria uma cópia independente da lista
+📘 Exemplo:
+```python
+    numeros = [1, 2, 3]
+    copia = numeros.copy()
+
+    copia.append(4)
+
+    print("Original:", numeros)  # [1, 2, 3]
+    print("Cópia:   ", copia)    # [1, 2, 3, 4]
+```
+📌 Resultado:
+
+Original: [1, 2, 3]  
+Cópia:    [1, 2, 3, 4]
+
+    ✅ A lista copia é independente da numeros.
+    ✅ Modificar a cópia não altera a original.
+
+⚠️ Sem copy() (erro comum):
+
+```python
+    lista1 = [10, 20]
+    lista2 = lista1     # Isso não copia, só liga os dois nomes à mesma lista
+
+    lista2.append(30)
+    print(lista1)  # [10, 20, 30] → também foi alterada!
+```
+    ⚠️ Neste caso, as duas variáveis apontam para a mesma lista na memória.
+
+✅ Dica: copiar com copy() ou [:] (fatiamento)
+
+Ambos funcionam bem:
+```python
+    copia1 = lista.copy()   # Forma clara
+    copia2 = lista[:]       # Atalho com fatiamento
+
+```
+
 
 ## 💡 Exemplos
 
