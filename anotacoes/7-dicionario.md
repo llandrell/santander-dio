@@ -52,7 +52,7 @@ dados = dict(nome="André", idade=28, cidade="Recife")
 print(dados)
 produto = dict(nome="Notebook", preco=3500.00)
 ```
-####Importante: ao usar dict() com essa sintaxe, as chaves devem ser strings válidas como nomes de variáveis (sem espaços, não podem começar com número, etc).
+#### Importante: ao usar dict() com essa sintaxe, as chaves devem ser strings válidas como nomes de variáveis (sem espaços, não podem começar com número, etc).
 ---
 
 ## 🔍 Acessando dados
@@ -265,6 +265,82 @@ print("nome" in pessoa)  # True
 print("cpf" in pessoa)   # False
 ```
 
+### 12. dict.setdefault(chave, valor_padrao)
+
+O método setdefault() é usado para:
+
+    Buscar o valor de uma chave no dicionário.
+
+    Se a chave não existir, ela será criada automaticamente com o valor fornecido.
+
+    Se a chave já existir, o valor não é alterado.
+
+📌 Esse método é útil para evitar KeyError e inicializar valores de forma dinâmica, como listas, contadores ou agrupamentos.
+
+
+```python
+usuario = {
+    "nome": "André",
+    "idade": 25
+}
+
+# Tenta acessar a chave "email". Se não existir, cria com valor padrão.
+email = usuario.setdefault("email", "nao informado")
+
+print(email)         # nao informado
+print(usuario)       # {'nome': 'André', 'idade': 25, 'email': 'nao informado'}
+
+#💡 Se a chave já existir, o valor não é sobrescrito:
+
+usuario["email"] = "andre@email.com"
+usuario.setdefault("email", "outro@email.com")
+
+print(usuario["email"])  # andre@email.com
+
+```
+
+### 13. del – Removendo chaves ou dicionários inteiros
+
+O del é uma instrução do Python usada para:
+
+    Remover uma chave específica de um dicionário.
+
+    Apagar o dicionário inteiro da memória, se necessário.
+
+```python
+#🔹 Removendo uma chave específica:
+
+pessoa = {
+    "nome": "André",
+    "idade": 25,
+    "cidade": "Fortaleza"
+}
+
+del pessoa["idade"]
+
+print(pessoa) #{'nome': 'André', 'cidade': 'Fortaleza'}
+
+
+#⚠️ Se a chave não existir, ocorre erro!
+
+del pessoa["email"]  # ❌ KeyError: 'email'
+
+#para evitar esse erro, verifique antes com "chave" in dicionario:
+
+if "email" in pessoa:
+    del pessoa["email"]
+
+
+# 🔹 Apagando o dicionário inteiro:
+
+dados = {"a": 1, "b": 2}
+del dados
+
+print(dados)  # ❌ NameError: name 'dados' is not defined
+#💥 O dicionário deixou de existir na memória.
+
+
+```
 
 
 ## 💡💡💡 Exemplos Reais de Uso
@@ -285,6 +361,33 @@ produtos = {
 }
 
 ```
+## 🔍 Como verificar se uma chave está no dicionário
+✅ Usando o operador in
+
+```python
+pessoa = {
+    "nome": "André",
+    "idade": 25
+}
+
+# Verificar se a chave "nome" existe
+if "nome" in pessoa:
+    print("A chave 'nome' existe!")
+
+# Verificar se "email" existe
+if "email" not in pessoa:
+    print("A chave 'email' NÃO existe.")
+
+#🧾 Saída:
+
+#A chave 'nome' existe!
+#A chave 'email' NÃO existe.
+
+
+
+```
+
+
 ## 📌 Observações
 
 - As **chaves devem ser únicas e imutáveis** (ex: string, número, tupla).
