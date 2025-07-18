@@ -30,7 +30,7 @@ meu_conjunto = set([1, 2, 3])
 
 ###você pode usando o set eleinar elementos duplicados em uma lista passando como paremetro a lista na criação do conjunto 
 
-### o set e iteravel apenas na sua construção
+### o set espera um iteravel na sua construção
 
 ### o set não garante a ordem de sequencia, ele pode desordenar o item
 
