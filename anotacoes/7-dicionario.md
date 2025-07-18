@@ -346,7 +346,7 @@ print(dados)  # ❌ NameError: name 'dados' is not defined
 ## 💡💡💡 Exemplos Reais de Uso
 
 ```python
-Copiar
+
 usuario = {
     "nome": "André",
     "idade": 30,
