@@ -145,7 +145,7 @@ soma, subtracao = operacoes(10, 5)
 print(soma)       # Saída: 15
 print(subtracao)  # Saída: 5
 ```
-####📝 Dica: A ordem das variáveis importa! Os valores retornados serão atribuídos na mesma ordem em que foram definidos na tupla.
+###📝 Dica: A ordem das variáveis importa! Os valores retornados serão atribuídos na mesma ordem em que foram definidos na tupla.
 ---
 
 
