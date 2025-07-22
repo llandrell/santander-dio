@@ -89,7 +89,7 @@ Se você não usar explicitamente a palavra-chave return, o Python automaticamen
 
  - O tipo de None é NoneType:
 
-####⚠️ Cuidado:
+###⚠️ Cuidado:
 Mesmo que a função faça algo visualmente (como imprimir), isso não significa que ela retornou algum valor:
 #### ✅ Dica prática
 Se a função só precisa executar uma ação (efeito colateral), como mostrar algo ou salvar em um arquivo, return pode não ser necessário.
@@ -296,5 +296,190 @@ def executar(funcao):
 
 executar(saudacao)  # saída: Olá!
 ```
+
+# 🧠 Funções em Python — Parâmetros Especiais e Objetos de Primeira Classe
+
+## 🔹 Argumentos em Python
+
+Quando chamamos uma função em Python, podemos passar argumentos de **duas formas**:
+
+1. **Por posição** (ordem importa)  
+2. **Por nome** (explicitando o nome do parâmetro)
+
+### Exemplo básico:
+
+```python
+def saudacao(nome, mensagem):
+    print(f"{mensagem}, {nome}!")
+
+saudacao("André", "Olá")                 # por posição
+saudacao(nome="André", mensagem="Olá")   # por nome
+```
+
+---
+
+## 🎯 Por que restringir a forma de passar argumentos?
+
+Em funções complexas, para deixar o código **mais claro e seguro**, podemos **especificar se os argumentos devem ser passados por posição ou nome**.
+
+Python permite isso com os **parâmetros especiais**:
+
+```python
+def f(pos1, pos2, /, por_or_key, *, kwd1, kwd2):
+    pass
+```
+
+### 📌 Significado da assinatura:
+
+| Símbolo | Significado |
+|--------|-------------|
+| `/`    | Tudo antes deve ser passado por **posição** |
+| `*`    | Tudo depois deve ser passado por **nome** (keyword only) |
+| Entre os dois | Pode ser por posição ou por nome |
+
+---
+
+## ✅ Exemplos válidos:
+
+```python
+def f(a, b, /, c, *, d, e):
+    print(a, b, c, d, e)
+
+f(1, 2, 3, d=4, e=5)           # ✔️ OK
+f(1, 2, c=3, d=4, e=5)         # ✔️ OK
+```
+
+## ❌ Exemplos inválidos:
+
+```python
+f(a=1, b=2, c=3, d=4, e=5)     # ❌ Erro: a e b devem ser passados por posição
+f(1, 2, 3, 4, e=5)             # ❌ Erro: 'd' deve ser nomeado
+```
+
+---
+
+## 🧪 Exemplos com os três tipos
+
+```python
+def exemplo(x, y, /, z, *, w):
+    print(f"x={x}, y={y}, z={z}, w={w}")
+
+# Correto:
+exemplo(10, 20, 30, w=40)         # x=10, y=20, z=30, w=40
+
+# Inválido:
+# exemplo(x=10, y=20, z=30, w=40)  # ❌ 'x' e 'y' devem ser passados por posição
+```
+
+---
+
+# 🧩 Funções como Objetos de Primeira Classe
+
+Em Python, **funções são objetos de primeira classe**, ou seja, podem ser:
+
+✅ Atribuídas a variáveis  
+✅ Passadas como argumentos  
+✅ Retornadas de outras funções (closures)  
+✅ Armazenadas em estruturas de dados (listas, dicionários, etc.)
+
+---
+
+## 🎓 O que são Objetos de Primeira Classe?
+
+Objetos que:
+- Podem ser criados em tempo de execução
+- Podem ser atribuídos a variáveis
+- Podem ser passados como argumento
+- Podem ser retornados por outras funções
+
+---
+
+## 🔹 1. Atribuindo uma função a uma variável
+
+```python
+def somar(a, b):
+    return a + b
+
+# Atribuindo a função a outra variável
+operacao = somar
+print(operacao(3, 4))  # 7
+```
+
+---
+
+## 🔹 2. Passando uma função como argumento
+
+```python
+def aplicar(funcao, x, y):
+    return funcao(x, y)
+
+def multiplicar(a, b):
+    return a * b
+
+print(aplicar(multiplicar, 5, 6))  # 30
+```
+
+---
+
+## 🔹 3. Usando em estruturas de dados
+
+```python
+def saudacao():
+    return "Olá"
+
+def despedida():
+    return "Tchau"
+
+acoes = {
+    "inicio": saudacao,
+    "fim": despedida
+}
+
+print(acoes["inicio"]())  # Olá
+```
+
+---
+
+## 🔹 4. Retornando funções (Closures)
+
+```python
+def criar_saudacao(nome):
+    def saudacao():
+        return f"Olá, {nome}!"
+    return saudacao
+
+mensagem = criar_saudacao("André")
+print(mensagem())  # Olá, André!
+```
+
+💡 Aqui `mensagem` é uma **função personalizada**, gerada com base no nome.
+
+---
+
+## 📦 Quais são os Objetos de Primeira Classe em Python?
+
+Além de funções, os seguintes objetos também são de primeira classe em Python:
+
+| Tipo de Objeto      | É de Primeira Classe? |
+|---------------------|------------------------|
+| Números             | ✅ Sim |
+| Strings             | ✅ Sim |
+| Listas              | ✅ Sim |
+| Tuplas              | ✅ Sim |
+| Dicionários         | ✅ Sim |
+| Funções             | ✅ Sim |
+| Classes e Objetos   | ✅ Sim |
+
+---
+
+## ✅ Conclusão
+
+- Parâmetros especiais (`/`, `*`) melhoram **legibilidade e clareza** das funções.
+- Funções são **cidadãos de primeira classe** em Python — podem ser manipuladas como dados.
+- Isso torna Python uma linguagem extremamente **flexível e poderosa** para programação funcional e estruturada.
+
+---
+
+📓 *Anotações feitas como se fosse um aluno aprendendo com exemplos e testes práticos.*
 
 ---
