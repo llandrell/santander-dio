@@ -480,6 +480,172 @@ Além de funções, os seguintes objetos também são de primeira classe em Pyth
 
 ---
 
-📓 *Anotações feitas como se fosse um aluno aprendendo com exemplos e testes práticos.*
+# 📚 Blocos e Escopos em Python — Foco em Funções
+
+## 🧱 O que são Blocos?
+
+Um **bloco** é uma área de código que fica **delimitada por indentação** em Python. Toda função, estrutura de repetição (`for`, `while`), condição (`if`, `elif`, `else`) ou classe tem seu **próprio bloco**.
+
+### Exemplo de bloco dentro de uma função:
+
+```python
+def saudacao(nome):
+    mensagem = f"Olá, {nome}!"  # Bloco da função começa aqui
+    print(mensagem)             # Ainda dentro do bloco da função
+```
+
+---
+
+## 🧭 O que é Escopo?
+
+O **escopo** define onde uma variável é **visível e acessível** no programa.  
+Em Python, existem **quatro níveis principais de escopo**, conhecidos pela sigla **LEGB**:
+
+| Sigla | Escopo         | Descrição                                        |
+|-------|----------------|--------------------------------------------------|
+| L     | Local          | Dentro da função onde a variável foi criada     |
+| E     | Enclosing      | Funções aninhadas (escopo da função externa)    |
+| G     | Global         | Variáveis definidas no nível principal do script|
+| B     | Built-in       | Funções e nomes próprios do Python (`len`, `print`) |
+
+---
+
+## 🎯 Escopo Local
+
+Variáveis declaradas **dentro de uma função** só podem ser usadas dentro daquela função.
+
+```python
+def exemplo():
+    x = 10        # Escopo local
+    print(x)
+
+exemplo()        # 10
+print(x)         # ❌ Erro: x não está definido fora da função
+```
+
+---
+
+## 📦 Escopo Global
+
+Variáveis declaradas **fora de qualquer função** podem ser acessadas dentro das funções, mas **não podem ser modificadas diretamente**, a menos que usemos a palavra-chave `global`.
+
+```python
+x = 5  # Variável global
+
+def mostrar():
+    print(x)  # Pode acessar, mas não modificar
+
+mostrar()     # 5
+```
+
+---
+
+## ⚠️ Modificando variáveis globais (com `global`)
+
+```python
+contador = 0
+
+def incrementar():
+    global contador
+    contador += 1
+
+incrementar()
+print(contador)  # 1
+```
+
+✅ Isso funciona, mas…
+
+---
+
+## ❌ Por que NÃO usar variáveis globais?
+
+Usar `global` é geralmente **uma má prática**, porque:
+
+- ❗ Dificulta o **entendimento e a manutenção** do código.
+- 🧪 Torna o programa **menos previsível** e mais propenso a **erros difíceis de rastrear**.
+- 🔁 Quebra o princípio do **encapsulamento** e da **modularidade**.
+- 🧩 Funções devem ser **independentes** e não depender de variáveis externas.
+
+---
+
+## ✅ Boas práticas:
+
+- Prefira **retornar valores** de funções e usar variáveis locais.
+- Use `global` **apenas quando extremamente necessário**.
+- Se precisar compartilhar estado entre funções, use **parâmetros** ou **objetos** (como dicionários ou classes).
+
+---
+
+## 🧪 Exemplo ruim com `global`:
+
+```python
+total = 0
+
+def adicionar(valor):
+    global total
+    total += valor
+
+adicionar(10)
+adicionar(5)
+print(total)  # 15
+```
+
+🧨 Problema: a função **muda o estado global**, o que pode causar **efeitos colaterais** inesperados.
+
+---
+
+## ✅ Exemplo com boas práticas:
+
+```python
+def adicionar(valor, total):
+    return total + valor
+
+total = 0
+total = adicionar(10, total)
+total = adicionar(5, total)
+print(total)  # 15
+```
+
+👍 Mais seguro, mais previsível e fácil de testar!
+
+---
+
+## 🔄 Funções dentro de funções (Escopo Enclosing)
+
+```python
+def externa():
+    mensagem = "Olá"
+
+    def interna():
+        print(mensagem)  # Usa variável do escopo da função externa
+
+    interna()
+
+externa()  # Olá
+```
+
+🧠 Isso é útil em **closures** e funções decoradoras.
+
+---
+
+## 📌 Resumo:
+
+| Conceito       | Explicação breve |
+|----------------|------------------|
+| **Bloco**      | Área de código delimitada por indentação |
+| **Escopo**     | Onde a variável é visível e utilizável |
+| **Local**      | Dentro da função |
+| **Global**     | Fora da função, acessível por todos |
+| **Enclosing**  | Funções dentro de funções |
+| **Built-in**   | Escopo das funções internas do Python |
+
+---
+
+## 🎓 Conclusão:
+
+- Sempre **prefira variáveis locais**.
+- Use `return` e **parâmetros bem definidos**.
+- Evite `global`, a não ser que seja extremamente necessário.
+- Entender escopos te ajuda a **organizar, testar e manter** seu código com mais clareza.
 
 ---
