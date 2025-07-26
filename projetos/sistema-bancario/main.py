@@ -56,7 +56,7 @@ def saque(valor, saldo, extrato, numero_saque, LIMITE_SAQUES):
     return saldo, extrato, numero_saque
 
 def impExtrato(extrato, saldo):
-    print("\n📄 Extrato:")
+    print("\n===== 📄EXTRATO =====")
     if extrato:
         for operacao in extrato:
             print(operacao)
@@ -64,6 +64,7 @@ def impExtrato(extrato, saldo):
         print("Não foram realizadas movimentações.")
     
     print(f"\n💰 Saldo atual: R$ {saldo:.2f}")
+    print("==========================\n")
 
 
 # Criamos uma variável chamada `menu` com uma string que será usada para exibir as opções disponíveis para o usuário.
