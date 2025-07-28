@@ -49,15 +49,14 @@ santander-dio/
 | Módulo                                                                  | Status           |
 |-------------------------------------------------------------------------|------------------|
 | Princípios de Desenvolvimento De Aplicações Python                      | ✅ Concluído     |
-| Operadores e Manipulação de String com Python                           | 🔁 50% concluído |
-| Estruturas Condicionais e de Repetição em Python                        | 🔁 Em andamento  |
-| Estruturas de Dados e Listas com Python                                 | ⏳ Não iniciado  |
-| Trabalhando Com Funções em Python                                       | ⏳ Não iniciado  |
-| Orientação a Objetos e Boas Práticas em Python                          | ⏳ Não iniciado  |
+| Operadores e Manipulação de String com Python                           | ✅ Concluído     |
+| Estruturas de Dados e Listas com Python                                 | ✅ Concluído     |
+| Trabalhando Com Funções em Python                                       | ✅ Concluído     |
+| Orientação a Objetos e Boas Práticas em Python                          | 🔁 Em andamento  |
 | Trabalhando com Pacotes Python                                          | ⏳ Não iniciado  |
 | Integração Python com Banco de Dados                                    | ⏳ Não iniciado  |
 | Desenvolvimento Orientado a Testes com Python                           | ⏳ Não iniciado  |
-| Santander 2025 - Back-End com Python (Trilha completa - 45h restantes)  | ✅ 17% concluído |
+| Santander 2025 - Back-End com Python (Trilha completa - 29h restantes)  | ✅ 49% concluído |
 
 ---
 
