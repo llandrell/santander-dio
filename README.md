@@ -161,8 +161,8 @@ O repositório está estruturado para facilitar o aprendizado:
 ## 📞 Contato
 
 **André Lucas Almeida**
-- 📧 Email: [andrelucas85@hotmail.com](mailto:andrelucas85@hotmail.com)
-- 📧 Email alternativo: [611almeida@gmail.com](mailto:611almeida@gmail.com)
+- 📧 Email: [andrelucas85@hotmail.com](andrelucas85@hotmail.com)
+- 📧 Email alternativo: [611almeida@gmail.com](611almeida@gmail.com)
 - 🔗 GitHub: [@llandrell](https://github.com/llandrell)
 
 ## 📄 Licença
