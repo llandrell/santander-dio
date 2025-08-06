@@ -1,0 +1,137 @@
+# 🔌 Interfaces e Classes Abstratas em Python
+
+## ✅ O que são Interfaces em Programação?
+
+Uma **interface** define um **contrato** sobre o que uma classe deve fazer — ou seja, **quais métodos ela precisa ter**, mas **não define como esses métodos devem funcionar**.
+
+> É como um manual de instruções: você sabe o que tem que fazer, mas decide como fazer.
+
+Interfaces são úteis para garantir que diferentes classes tenham um comportamento esperado em comum, mesmo que a implementação seja diferente.
+
+---
+
+## 🎯 Para que serve uma Interface?
+
+- Garantir **consistência** entre diferentes implementações.
+- Estimular o uso de **polimorfismo** e programação orientada a abstrações.
+- Facilitar testes, manutenção e extensão do sistema.
+
+---
+
+## 🤔 Python tem Interface?
+
+Python **não possui o conceito tradicional de Interface** (como Java ou C#), mas podemos **simular interfaces** utilizando **classes abstratas**, com a ajuda do módulo `abc` (Abstract Base Classes).
+
+---
+
+## 📦 O que é o Módulo `abc`?
+
+O módulo `abc` permite criar **classes abstratas** e marcar métodos como **abstratos** com o decorador `@abstractmethod`.
+
+> Uma **classe abstrata** é aquela que **não pode ser instanciada diretamente**, e serve de modelo para outras classes.
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):  # herda de ABC (Abstract Base Class)
+    @abstractmethod
+    def emitir_som(self):
+        pass
+```
+
+---
+
+## 💡 O que é uma Assinatura de Método?
+
+A **assinatura de um método** é composta por:
+
+- Seu **nome**
+- E a **quantidade e tipo de parâmetros** esperados
+
+```python
+def emitir_som(self):  # assinatura do método
+    ...
+```
+
+---
+
+## 🛠️ Criando uma Classe Abstrata
+
+```python
+from abc import ABC, abstractmethod
+
+class FormaGeometrica(ABC):
+
+    @abstractmethod
+    def calcular_area(self):
+        pass
+```
+
+### 👇 Criando uma Classe Concreta que implementa a Abstrata
+
+```python
+class Quadrado(FormaGeometrica):
+    def __init__(self, lado):
+        self.lado = lado
+
+    def calcular_area(self):
+        return self.lado ** 2
+```
+
+### ⚠️ Tentativa de instanciar sem implementar gera erro
+
+```python
+forma = FormaGeometrica()  
+# TypeError: Can't instantiate abstract class FormaGeometrica with abstract methods calcular_area
+```
+
+---
+
+## 🧪 Exemplo Prático: Interface para Veículos
+
+```python
+from abc import ABC, abstractmethod
+
+class Veiculo(ABC):
+    @abstractmethod
+    def ligar(self):
+        pass
+
+    @abstractmethod
+    def desligar(self):
+        pass
+
+class Carro(Veiculo):
+    def ligar(self):
+        print("Carro ligado")
+
+    def desligar(self):
+        print("Carro desligado")
+
+# Uso
+carro = Carro()
+carro.ligar()     # Carro ligado
+carro.desligar()  # Carro desligado
+```
+
+---
+
+## 👍 Boas Práticas com Interfaces e Classes Abstratas
+
+- Use interfaces para definir **comportamentos esperados** entre classes.
+- Evite usar `@abstractmethod` em métodos que você já implementou completamente.
+- Sempre implemente **todos os métodos abstratos** nas subclasses.
+- Prefira interfaces quando quiser garantir **contratos de implementação** entre várias classes.
+
+---
+
+## 📌 Conclusão
+
+- Python não possui interface nativa, mas usamos classes abstratas para simular esse comportamento.
+- A interface define **"o que fazer"**, e a implementação em cada classe concreta define **"como fazer"**.
+- O módulo `abc` fornece as ferramentas necessárias para isso.
+
+---
+
+✍️ Autor: [Andre Almeida](https://github.com/llandrell)  
+🗓️ Atualizado: {datetime.today().strftime('%d/%m/%Y')}
