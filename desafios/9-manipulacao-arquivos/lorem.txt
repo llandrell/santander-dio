@@ -1,0 +1,4 @@
+olá, word
+olá, mundo2
+olá, mundo3
+olá, mundo4
